@@ -1,14 +1,24 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Description For this challenge we were asked to create an application that can be used to write and save notes. This application uses Express.js on the backend to save and retrieve user-generated note data from a JSON file. The frontend has already been built. It is my job to build out the backend, create the connection between the two and deploy the finished product to Heroku.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timothy-wardlow/Note-Taker.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/timothy-wardlow/Note-Taker/issues"
+  },
+  "homepage": "https://github.com/timothy-wardlow/Note-Taker#readme"
 }
