@@ -6,6 +6,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
+app.use(express.static('public'));
 
 const notes = require('./db/db.json');
 
@@ -27,6 +28,14 @@ app.post('/api/notes', (req, res) => {
     req.body.id = notes.length.toString();
     const newNote = createNote(req.body, notes);
     res.json(newNote);
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
 app.listen(PORT, () => {
